@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>              
+  <meta charset="UTF-8">
+  <meta name="author" content="Gustavo"/>
+  <meta name="keywords" content="Html5, CSS, javaScript, Média"/>
+  <meta name="description" content="Programação de html 5, Interdiciplinar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário para saber se aluno está aprovado ou não </title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <form action="">
+    <!-- Cabeçalho  -->
+    <h2>
+      Calcular média do aluno(a)
+    </h2>
+    <!--Coleta nome do usuário -->
+    <div class="input">
+      <input required type="text" id="Nome" />
+      <label for="Nome">Nome Completo</label>
+      <span class="error"></span>
+    </div>
+    <!-- Coleta RGM do aluno -->
+    <div class="input">
+      <input required type="text" id="RGM">
+      <label for="RGM">RGM</label>
+      <span class="error"></span>
+    </div>
+
+    <!--Coleta e-mail do usuário-->
+    <div class="input">
+      <input required type="email" id="email"/>
+      <label for="email">Email</label>
+      <span class="error"></span>
+    </div>
+
+    <!--Input da nota da avaliação a2-->
+    <div class="input">
+        <input required type="text" id="A2"/>
+        <label for="A2">Nota A2</label>
+        <span class="error"></span>
+    </div>
+
+    <!--Input da nota da avaliaçao a1-->
+    <div class="input">
+        <input required type="text" id="A1"/>
+        <label for="A1">Nota A1</label>
+        <span class="error"></span>
+    </div>
+
+    <br>
+    <!-- Input da escolha da matéria  --> 
+    <div class="input" style="color: rgba(255, 255, 255, 0.6) ;"><label class="radio">Matéria</label></div>
+    <div class="input">
+        <!-- Sistema operacinal -->
+        <input name="padrao" checked id="sis" type="radio" value="Sistema Operacional"/><br>
+        <label for="sis" class="testDisci">Sistema Operacional</label><br>  
+        <!-- Modelagem de negócio -->
+        <input name="padrao" id="mod" type="radio" value="Modelagem de negócio"/><br>
+        <label for="mod" class="testDisci">Modelagem de negócio</label><br>
+        <!-- Programação de computadores -->
+        <input name="padrao" id="pro" type="radio" value="Programação de Computadores"/><br>
+        <label for="pro" class="testDisci">Programação de Computadores</label><br>
+        <!-- Aplicação para internet -->
+        <input name="padrao" id="app" type="radio" value="Aplicações da Internet"/><br>
+        <label for="app" class="testDisci">Aplicações da Internet</label><br>
+        <!-- Organização e arquitetura de Computadores -->
+        <input name="padrao" id="org" type="radio" value="Organização e arquitetura de Computadores"/><br>
+        <label for="org" class="testDisci"> Organização e arquitetura de Computadores</label>
+        
+        
+        <span class="error"></span>  
+    </div>
+    <!--Botão que calcula média -->
+    <button type="submit" id="Calcular">Calcular</button>
+
+    <!--Tela de output-->
+    <div class="result" id="resultado"></div>
+    
+    <div>
+      <a href="./figuras/ceunsp_desktop_pos.png" >
+        <img src="./figuras/ceunsp_desktop_pos.png" id="img" alt="logo"/>
+      </a>  
+    </div>
+    
+
+
+  
+
+  </form>
+</body>
+
+</html>

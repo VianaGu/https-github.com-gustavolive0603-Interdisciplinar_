@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #fd951f;
+    --bg-color: #130f0d;
+    --text-color: #f0f0f5;
+    --light-color: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #130f0d;
+    color: #f0f0f5;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.03);
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 32px auto;
+    padding: 32px 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin-bottom: 32px;
+}
+
+div.input {
+    margin-bottom: 24px;
+    position: relative;
+}
+/*Manipula a posição das seleção de materias */
+input[type="radio"]{
+    width: 40%;
+    max-width: 30px;
+}
+/*trata todos os campos de textos */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+button {
+    /* reset appeareance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* box */
+    width: 100%;
+
+    padding: 16px 0;
+
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: transparent;
+
+    outline: none;
+
+    /* text */
+    color: var(--text-color);
+    font-size: 1em;
+
+}
+
+button {
+    margin-top: 16px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+button:hover{
+    background-color: #fc8906;
+    box-shadow: 0 4px 0 #f88f17;
+}
+button:active{
+    position: relative;
+    top: 3px;
+    box-shadow:none;
+}
+
+/* Faz toda a configuração da tela de output  */
+.result{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
+    font: italic 1.5rem serif;
+    box-shadow: 0px 0px 10px black;
+    background: #000;
+    color: rgb(0, 38, 255);
+    padding: 100px;
+    box-sizing: border-box;
+    user-select: none;
+  }
+/* Configuração padrao dos labels  */
+input ~ label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.6) ;
+
+    transition: .4s;
+}
+/* Configura o label da escolha das matérias */
+input ~ label.radio {
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+/* alinhamento dos labels dos input do tipo radio */
+label.testDisci {
+    
+    position: inherit;
+    padding: auto auto;
+    top: -21px;
+    left: 26px;
+    
+    
+}
+
+/* animação dos labels  */
+input:focus ~ label,
+input[type="number"]:valid ~ label,
+input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+
+.input span.error {
+    display: flex;
+    
+    padding: 0;
+
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.input span.error.active {
+    border: 1px solid red;
+    padding: 0.4em;
+}
